@@ -14,10 +14,7 @@
  init-method="init" destroy-method="destroy" 
    scope="prototype"
  >	
- <property name="paymentDao" ref="setterInjectionDao"></property>
-</bean>
-
-<bean id="setterInectionDao" class="com.payment.spring.domain.xml.SetterInjectionDAO">
+ <property name="callBackMethodImpl" ref="callBackMethodImpl"></property>
 </bean>
 
 <!-- Constructor Injection -->

@@ -10,8 +10,7 @@ public class TestXML {
 	public static void main(String[] args) {
 		System.out.println("test");
 		ApplicationContext context =
-	             new ClassPathXmlApplicationContext("XMLBeans.xml");
-	      XMLStudent student = (XMLStudent) context.getBean("XMLstudent");
-	     System.out.println("Student name : "+student.getName());
+	             new ClassPathXmlApplicationContext("/XMLBeans.xml");	   
+	     
 	}
 }

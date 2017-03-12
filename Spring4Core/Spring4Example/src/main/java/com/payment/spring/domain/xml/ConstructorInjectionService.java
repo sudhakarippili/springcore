@@ -3,12 +3,12 @@ package com.payment.spring.domain.xml;
 public class ConstructorInjectionService {
 	
 	private String name;
-	private CallBackMethodImpl address;
+	private CallBackMethodImpl callBackMethodImp;
 	
 	
-	public ConstructorInjectionService(String name,CallBackMethodImpl address){
+	public ConstructorInjectionService(String name,CallBackMethodImpl callBackMethodImp){
 		this.name=name;
-		this.address=address;
+		this.callBackMethodImp=callBackMethodImp;
 	}
 	
 	public ConstructorInjectionService(String name){

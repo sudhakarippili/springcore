@@ -18,5 +18,9 @@ public class XMLAppMain {
 		//ApplicationContext Factory
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("ApplicationContext.xml"); 
 		System.out.println("after object deletion");
+		
+		
+		
+		
 	}
 }

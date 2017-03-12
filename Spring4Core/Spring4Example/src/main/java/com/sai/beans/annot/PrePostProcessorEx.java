@@ -18,13 +18,11 @@ public class PrePostProcessorEx implements InitializingBean, DisposableBean{
 		System.out.println(" in pre destroy");
 	}
 
-	@Override
 	public void destroy() throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void afterPropertiesSet() throws Exception {
 		// TODO Auto-generated method stub
 		

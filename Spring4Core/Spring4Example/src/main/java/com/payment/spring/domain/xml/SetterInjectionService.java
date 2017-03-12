@@ -2,15 +2,15 @@ package com.payment.spring.domain.xml;
 
 public class SetterInjectionService {
 	
-	private SetterInjectionDAO paymentDao;
+	private CallBackMethodImpl callBackMethodImpl;
 	
 	
-	public SetterInjectionDAO getPaymentDao() {
-		return paymentDao;
+	public CallBackMethodImpl getCallBackMethodImpl() {
+		return callBackMethodImpl;
 	}
 
-	public void setPaymentDao(SetterInjectionDAO paymentDao) {
-		this.paymentDao = paymentDao;
+	public void setCallBackMethodImpl( CallBackMethodImpl callBackMethodImpl) {
+		this.callBackMethodImpl = callBackMethodImpl;
 	}
 
 	public void init(){
