@@ -1,5 +1,15 @@
 package com.payment.spring.domain.xml;
 
+
+//TODO 
+
+/**
+ * add a string,list,map
+ * add a 
+ * @author ADMIN
+ *
+ */
+
 public class SetterInjectionService {
 	
 	private CallBackMethodImpl callBackMethodImpl;

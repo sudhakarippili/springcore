@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- default-init-method  -->
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-init-method="init" 
+    default-destroy-method="destroy"
+	>
+<!--default init method  -->
+<!--default destory method  -->
+
+<!--
+	Spring template is like an abstract class and child has to extend
+	 
+	<bean id = "beanTeamplate" abstract = "true">
+      <property name = "message1" value = "Hello World!"/>
+      <property name = "message2" value = "Hello Second World!"/>
+      <property name = "message3" value = "Namaste India!"/>
+    </bean> -->
+
+<bean id="setterInjectionService" class="com.payment.spring.domain.xml.SetterInjectionService"
+ init-method="init" destroy-method="destroy" 
+   scope="prototype">	
+   
+ <property name="callBackMethodImpl" ref="callBackMethodImpl"></property>
+</bean>
+
+<!-- Constructor Injection -->
+
+<bean id="constructorInjectionService" 
+   class="com.payment.spring.domain.xml.ConstructorInjectionService"
+   scope="singleton"
+   init-method="init" destroy-method="destroy"
+   lazy-init="true"
+   >	
+  <constructor-arg value = "sampleName"/>
+  <constructor-arg ref = "callBackMethodImpl"/>
+</bean>
+
+
+<!-- Setter Injection -->
+
+
+<bean id="callBackMethodImpl" class="com.payment.spring.domain.xml.CallBackMethodImpl"
+   scope="singleton"
+>
+</bean>
+
+
+<!-- Inner bean example -->
+<!--
+<bean id="setterInjectionService" class="com.payment.spring.domain.xml.SetterInjectionService"
+ init-method="init" destroy-method="destroy" scope="prototype" >	
+  <property name = "callBackMethodImpl">
+        <bean id="callBackMethodImpl" class="com.payment.spring.domain.xml.CallBackMethodImpl"
+   scope="singleton"/>
+      </property>
+
+</bean>
+  -->
+
+
+ <bean id = "springCollections" class = "com.payment.spring.domain.xml.SpringCollections">
+      
+      <!-- results in a setSampleList(java.util.List) call -->
+      <property name = "sampleList">
+         <list>
+            <value>a1</value>
+            <value>a2</value>
+            <value>a3</value>            
+         </list>
+      </property>
+      
+      <!-- Refernce example 
+      <property name = "sampleList">
+         <list>      	
+      		<ref bean = "callBackMethodImpl"/>
+      	  </list>
+      </property>	  
+	  -->
+	  
+	  <!-- Passing null values  -->
+	  <!-- <property name = "email"><null/></property>  -->
+	 
+      <!-- results in a setSampleSet(java.util.Set) call -->
+      <property name = "sampleSet">
+         <set>
+           <value>a1</value>
+            <value>a2</value>
+            <value>a3</value>   
+         </set>
+      </property>
+
+      <!-- results in a setSampleMap(java.util.Map) call -->
+      <property name = "sampleMap">
+         <map>
+            <entry key = "1" value = "a1"/>
+            <entry key = "2" value = "a2"/>
+            <entry key = "3" value = "a3"/>            
+         </map>
+      </property>
+      
+      <!-- results in a setSampleProp(java.util.Properties) call -->
+      <property name = "sampleProp">
+         <props>
+            <prop key = "one">a1</prop>
+            <prop key = "two">a2</prop>
+            <prop key = "three">a3</prop>            
+         </props>
+      </property>
+   </bean>
+
+
+<!--  Autowiring  by no,name,type,constructor,autodetect-->
+<!-- 
+	
+	<bean id="setterInjectionService" class="com.payment.spring.domain.xml.SetterInjectionService"
+	   autowire = "byName"
+	   
+	   >	
+ 	</bean>
+
+ -->
+
+
+</beans>

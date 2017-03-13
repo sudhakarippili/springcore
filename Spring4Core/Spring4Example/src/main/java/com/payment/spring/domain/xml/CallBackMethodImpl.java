@@ -48,4 +48,8 @@ public class CallBackMethodImpl implements InitializingBean,DisposableBean,BeanP
 		
 	}	
 	
+	
+	public void sayHello(){
+		System.out.println("Call Back Method saying hello");
+	}
 }
