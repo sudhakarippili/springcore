@@ -1,4 +1,4 @@
-package com.sai.beans.annot;
+package com.payment.beans.annot;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;

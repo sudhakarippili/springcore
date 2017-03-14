@@ -1,4 +1,4 @@
-package com.sai.beans.annot;
+package com.payment.beans.annot;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
@@ -26,6 +26,10 @@ public class PrePostProcessorEx implements InitializingBean, DisposableBean{
 	public void afterPropertiesSet() throws Exception {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public void display(){
+		System.out.println("PrePost Processor Example");
 	}
 	
 }

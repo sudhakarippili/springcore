@@ -1,4 +1,4 @@
-package com.sai.beans.annot;
+package com.payment.beans.annot;
 
 public class AnAddress {
 	

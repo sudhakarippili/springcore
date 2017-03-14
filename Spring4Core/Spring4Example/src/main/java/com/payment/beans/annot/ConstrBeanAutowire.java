@@ -1,4 +1,4 @@
-package com.sai.beans.annot;
+package com.payment.beans.annot;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -12,7 +12,7 @@ public class ConstrBeanAutowire {
 	@Autowired
 	public ConstrBeanAutowire(SingletonDep dep1){
 		System.out.println("in ConstrBeanAutowire constructor");
-		dep1.message();
+		dep1.displayHashCode();
 	}
 	
 }

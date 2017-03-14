@@ -26,6 +26,8 @@
     
     <context:annotation-config />
 
-	<context:component-scan base-package="com.sai.beans.annot" />
+	<context:component-scan base-package="com.payment.beans.annot" />
+	<context:property-placeholder location="classpath:sample.properties"/>
+	 
 
  </beans>

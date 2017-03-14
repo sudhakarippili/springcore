@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.sai.beans.annot.AnStudent;
+import com.payment.beans.annot.AnStudent;
 
 public class TestAnot {
 

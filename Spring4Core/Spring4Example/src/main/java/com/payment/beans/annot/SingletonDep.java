@@ -1,4 +1,4 @@
-package com.sai.beans.annot;
+package com.payment.beans.annot;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
@@ -23,7 +23,7 @@ import org.springframework.stereotype.Component;
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class SingletonDep {
 
-	public void message(){
+	public void displayHashCode(){
 		System.out.println("singleton dep::"+this.hashCode());
 	}
 }
